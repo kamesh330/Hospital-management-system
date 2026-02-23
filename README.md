@@ -1,68 +1,73 @@
-# CarePulse++ v3.0 — Clinical Command Center
+# Welcome to your Lovable project
 
-## Quick Start
-```bash
-npm install
-npm start
+## Project info
+
+**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+
+## How can I edit this code?
+
+There are several ways of editing your application.
+
+**Use Lovable**
+
+Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
-Opens at **http://localhost:3000**
 
-## Login
-| Hospital ID | Password     |
-|-------------|--------------|
-| H001        | CAREH0012026 |
-| H002        | CAREH0022026 |
+**Edit a file directly in GitHub**
 
-Formula: `password = "CARE" + hospital_id + "2026"`
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-## Features
+**Use GitHub Codespaces**
 
-### Existing Features
-- **Dashboard** — Patient priority queue, KPIs, hospital metrics, food menu toggles
-- **Patients** — Full patient detail with deviation indices, recommendations, explanation log
-- **Hospital** — Stress index, ratios, ER/admission logic, edit mode
-- **Data Entry** — Add/edit patients, live recomputation
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-### New Features (v3)
+## What technologies are used for this project?
 
-#### 1. Risk Heatmap (Clinical Command Center)
-- **Ward Heatmap** — colour-coded grid per patient (blue→red by score)
-- **Vital Deviation Index Matrix** — full 10-index table per patient
-- Colour cells: red=high deviation, yellow=moderate, green=low
+This project is built with:
 
-#### 2. Surge Mode (Tab: Surge Mode)
-- Flags 15% of patients as emergency surge cases
-- Formula: `Rnew = Rbase × (1 + SurgeFactor)`
-- Adjustable surge factor (10%–100%)
-- Updates: ICU overflow, Ventilator Pressure, Stress Index, ER freeze
-- Generates: Surge Alert Report, Transfer List, New Critical count
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-#### 3. Oxygen Crisis Simulation (Tab: O₂ Crisis)
-- Triggers when O₂ supply < 40%
-- `CriticalRisk = CriticalRisk × 1.25` for Critical + ICU patients
-- Top-K ventilator allocation by risk score when shortage detected
-- Bed prioritization reorder under crisis
+## How can I deploy this project?
 
-#### 4. Dynamic Staff Alerting System (Tab: Staff Alerts)
-- Auto-generated from patient vitals + hospital metrics
-- Alert levels: CRITICAL → SYSTEM → URGENT → WARNING
-- Per-patient alerts: O₂ drop, high fever, severe anemia, dehydration
-- System alerts: ICU overflow, ER freeze, ventilator shortage
-- Dismissible alerts with action directives
-- Badge count on nav tab
+Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
-## Protocol Formulas (from specification images)
-| Index | Formula |
-|-------|---------|
-| HR_dev | `\|HR − 80\|` |
-| BP_dev | `\|systolic − 120\| + \|diastolic − 80\|` |
-| O2_drop | `max(0, 0.95 − SpO2)` |
-| Fever | `max(0, T − 37.5) × 10` |
-| Resp_dev | `\|RR − 16\|` |
-| Sugar | `0 if 70≤S≤140, else \|S−100\|` |
-| Age_risk | `5 if age>60, else 0` (binary) |
-| BMI_risk | `5 if BMI<18.5 or >30, else 0` (binary) |
-| Anemia_risk | `5 if Hgb<10, else 0` (binary) |
-| Hyd_deficit | `max(0, 60 − hydration)` |
+## Can I connect a custom domain to my Lovable project?
 
-Weights Σ = 1.00: O₂(0.20) HR(0.15) BP(0.15) Fever(0.10) Resp(0.10) Sugar(0.08) Age(0.07) BMI(0.05) Hgb(0.05) Hyd(0.05)
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
