@@ -26,7 +26,7 @@ npm install
 npm start
 ```
 
-The app will open automatically at **http://localhost:3000**
+The app will open automatically at **https://kamesh330.github.io/Hospital-management-system/**
 
 ---
 
@@ -48,7 +48,7 @@ Your live app will be available at a URL like: `https://your-app-name.netlify.ap
 
 ## 📺 Live Demo / Localhost Output
 
-Once the app is running at **http://localhost:3000**, you'll see:
+Once the app is running at **(https://kamesh330.github.io/Hospital-management-system/)**, you'll see:
 
 ### Login Page Output
 
