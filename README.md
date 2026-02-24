@@ -26,7 +26,7 @@ npm install
 npm start
 ```
 
-The app will open automatically at **https://kamesh330.github.io/Hospital-management-system/**
+The app will open automatically at **http://localhost:3000**
 
 ---
 
