@@ -54,14 +54,14 @@ Once the app is running at **(https://kamesh330.github.io/Hospital-management-sy
 
 ```
 ┌─────────────────────────────────────┐
-│      CarePulse++ v2.0              │
-│   Smart Patient Monitoring         │
-│                                      │
-│  Hospital ID: [DEMO________]       │
+│      CarePulse++ v2.0               │
+│   Smart Patient Monitoring          │
+│                                     │
+│  Hospital ID: [DEMO________]        │
 │  Password:   [••••••••••••]         │
-│                                      │
-│         [ Login Button ]             │
-│                                      │
+│                                     │
+│         [ Login Button ]            │
+│                                     │
 │  ✓ Deterministic Authentication     │
 │  ✓ No Database Required             │
 └─────────────────────────────────────┘
